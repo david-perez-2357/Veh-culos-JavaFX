@@ -18,16 +18,17 @@ public class Database {
      * @param username example: "root"
      * @param password example: "1234"
      */
-    public Database(String url, String username, String password) {
+    public Database(String url, String username, String password) throws SQLException {
         this.url = url;
         this.username = username;
         this.password = password;
 
-        try{
+        try {
             this.connect();
-        } catch (SQLException e) {
-            throw new RuntimeException("Error connecting to the database", e);
+        }catch (SQLException e) {
+            throw new SQLException("Error connecting to the database", e);
         }
+
     }
 
     /**
@@ -35,7 +36,13 @@ public class Database {
      * @throws SQLException
      */
     public void connect() throws SQLException {
-        connection = DriverManager.getConnection(url, username, password);
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            connection = DriverManager.getConnection(url, username, password);
+
+        } catch (ClassNotFoundException e) {
+            throw new SQLException("Error loading JDBC driver", e);
+        }
     }
 
     /**
