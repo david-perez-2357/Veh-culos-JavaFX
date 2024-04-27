@@ -4,6 +4,7 @@ module com.example.vehiculosjavafx {
 
     requires org.controlsfx.controls;
     requires org.kordamp.bootstrapfx.core;
+    requires javafx.graphics;
 
     opens com.example.vehiculosjavafx to javafx.fxml;
     exports com.example.vehiculosjavafx;
