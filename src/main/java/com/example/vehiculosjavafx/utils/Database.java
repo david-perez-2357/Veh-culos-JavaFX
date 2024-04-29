@@ -119,5 +119,28 @@ public class Database {
         }
     }
 
+    /**
+     * Ejecutar una consulta preparada con parámetros
+     * @param query La consulta SQL con parámetros de marcador de posición (?)
+     * @param values Los valores para los parámetros de la consulta
+     * @return El número de filas afectadas por la consulta
+     * @throws SQLException Si hay un error al ejecutar la consulta
+     */
+    public int executePreparedStatement(String query, Object... values) throws SQLException {
+        try {
+            PreparedStatement statement = connection.prepareStatement(query);
+
+            // Asignar los valores a los parámetros de la consulta
+            for (int i = 0; i < values.length; i++) {
+                statement.setObject(i + 1, values[i]);
+            }
+
+            // Ejecutar la consulta y retornar el número de filas afectadas
+            return statement.executeUpdate();
+        } catch (SQLException e) {
+            throw new SQLException("Error executing prepared statement", e);
+        }
+    }
+
 }
 
