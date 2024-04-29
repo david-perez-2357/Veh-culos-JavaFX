@@ -14,12 +14,23 @@ public class Database {
 
     /**
      * Constructor
-     * @param url example: "jdbc:mysql://localhost:3306/vehiculos"
+     * @param language example: "mariadb"
+     * @param host example: "localhost"
+     * @param Port example: 3306
+     * @param DataBase example: "rentavehiculos"
      * @param username example: "root"
      * @param password example: "1234"
      */
-    public Database(String url, String username, String password) throws SQLException {
-        this.url = url;
+    public Database(String username, String password, String language, String host, Integer Port, String DataBase) throws SQLException {
+        this.url = "jdbc:" + language + "://" + host + ":" + Port + "/" + DataBase;
+        this.username = username;
+        this.password = password;
+
+        this.connect();
+    }
+
+    public Database(String language, String DataBase, String username, String password) throws SQLException {
+        this.url = "jdbc:" + language + "://localhost:3306/" + DataBase;
         this.username = username;
         this.password = password;
 
