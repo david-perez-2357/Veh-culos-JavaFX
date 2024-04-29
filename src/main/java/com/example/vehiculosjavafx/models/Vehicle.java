@@ -1,29 +1,23 @@
 package com.example.vehiculosjavafx.models;
 
 public class Vehicle {
-    private int id;
     private String description;
     private String brand;
     private String tuition; // Matrícula
-    private double kmDone;
-    private double pricePerDay;
+    private Integer kmDone;
+    private Integer pricePerDay;
     private boolean isRented;
 
     public Vehicle() {
     }
 
-    public Vehicle(int id, String description, String brand, String tuition, double kmDone, double pricePerDay, boolean isRented) {
-        this.id = id;
+    public Vehicle(String description, String brand, String tuition, Integer kmDone, Integer pricePerDay, boolean isRented) {
         this.description = description;
         this.brand = brand;
         this.tuition = tuition;
         this.kmDone = kmDone;
         this.pricePerDay = pricePerDay;
         this.isRented = isRented;
-    }
-
-    public int getId() {
-        return id;
     }
 
     public String getDescription() {
@@ -38,15 +32,19 @@ public class Vehicle {
         return tuition;
     }
 
-    public double getKmDone() {
+    public Integer getKmDone() {
         return kmDone;
     }
 
-    public double getPricePerDay() {
+    public Integer getPricePerDay() {
         return pricePerDay;
     }
 
     public boolean isRented() {
         return isRented;
+    }
+
+    public String toString() {
+        return description + " (" + tuition + ")";
     }
 }

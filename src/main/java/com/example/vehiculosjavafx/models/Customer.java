@@ -1,7 +1,6 @@
 package com.example.vehiculosjavafx.models;
 
 public class Customer {
-    private int id;
     private String name;
     private String surname;
     private String nif;
@@ -11,17 +10,12 @@ public class Customer {
     public Customer() {
     }
 
-    public Customer(int id, String name, String surname, String nif, String address, String city) {
-        this.id = id;
+    public Customer(String name, String surname, String nif, String address, String city) {
         this.name = name;
         this.surname = surname;
         this.nif = nif;
         this.address = address;
         this.city = city;
-    }
-
-    public int getId() {
-        return id;
     }
 
     public String getName() {
