@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ccdeddd-bb05-419c-bfb7-c7766d7583e1" name="Changes" comment="✨ New commits">
+    <list default="true" id="4ccdeddd-bb05-419c-bfb7-c7766d7583e1" name="Changes" comment="💡 Add commits">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vehiculosjavafx/AddVehicleApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vehiculosjavafx/AddVehicleApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vehiculosjavafx/models/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vehiculosjavafx/models/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vehiculosjavafx/models/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vehiculosjavafx/models/Vehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vehiculosjavafx/utils/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vehiculosjavafx/utils/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vehiculosjavafx/models/VehicleRent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vehiculosjavafx/models/VehicleRent.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,22 +44,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.AddVehicleApp.executor": "Run",
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.AddVehicleApp.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -77,7 +76,8 @@
       <option name="presentableId" value="Default" />
       <updated>1714215410681</updated>
       <workItem from="1714215411770" duration="3406000" />
-      <workItem from="1714381624100" duration="3720000" />
+      <workItem from="1714381624100" duration="3893000" />
+      <workItem from="1714393420425" duration="972000" />
     </task>
     <task id="LOCAL-00001" summary="🎉 Launch project">
       <option name="closed" value="true" />
@@ -183,7 +183,39 @@
       <option name="project" value="LOCAL" />
       <updated>1714383164800</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="🥅 Add try/catch">
+      <option name="closed" value="true" />
+      <created>1714385458747</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1714385458747</updated>
+    </task>
+    <task id="LOCAL-00015" summary="✨ Add function to get vehicles">
+      <option name="closed" value="true" />
+      <created>1714385486753</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1714385486753</updated>
+    </task>
+    <task id="LOCAL-00016" summary="🔥 Removed the ID field">
+      <option name="closed" value="true" />
+      <created>1714385510561</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1714385510561</updated>
+    </task>
+    <task id="LOCAL-00017" summary="💡 Add commits">
+      <option name="closed" value="true" />
+      <created>1714385531380</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1714385531380</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,7 +235,11 @@
     <MESSAGE value="✨ New vehicle rent model" />
     <MESSAGE value="✨ Added Getters and constructors" />
     <MESSAGE value="✨ New commits" />
-    <option name="LAST_COMMIT_MESSAGE" value="✨ New commits" />
+    <MESSAGE value=" Add try/catch" />
+    <MESSAGE value="✨ Add function to get vehicles" />
+    <MESSAGE value=" Removed the ID field" />
+    <MESSAGE value=" Add commits" />
+    <option name="LAST_COMMIT_MESSAGE" value=" Add commits" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
