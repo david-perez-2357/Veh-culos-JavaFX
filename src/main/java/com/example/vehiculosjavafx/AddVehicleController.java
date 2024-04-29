@@ -51,6 +51,12 @@ public class AddVehicleController {
             km.setText(selectedVehicle.getKmDone().toString());
             price.setText(selectedVehicle.getPricePerDay().toString());
             calculateTotalPrice();
+        }else {
+            description.setText("");
+            brand.setText("");
+            km.setText("");
+            price.setText("");
+            totalPrice.setText("");
         }
     }
 
@@ -61,6 +67,10 @@ public class AddVehicleController {
             nif.setText(selectedCustomer.getNif());
             city.setText(selectedCustomer.getCity());
             address.setText(selectedCustomer.getAddress());
+        }else {
+            nif.setText("");
+            city.setText("");
+            address.setText("");
         }
     }
 
