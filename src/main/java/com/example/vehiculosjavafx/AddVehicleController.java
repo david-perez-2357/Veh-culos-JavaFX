@@ -84,10 +84,12 @@ public class AddVehicleController {
 
         if (selectedVehicle == null || selectedCustomer == null || startDate.getValue() == null || endDate.getValue() == null || totalPrice.getText().isEmpty()) {
             GlobalVariables.showAlert("Ha dejado campos sin rellenar", Alert.AlertType.ERROR);
+            return;
         }
 
         if (startDate.getValue().isAfter(endDate.getValue())) {
             GlobalVariables.showAlert("La fecha de inicio no puede ser posterior a la fecha de fin", Alert.AlertType.ERROR);
+            return;
         }
 
         VehicleRent newRent = new VehicleRent(
