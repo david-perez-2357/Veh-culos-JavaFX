@@ -44,6 +44,10 @@ public class Vehicle {
         return isRented;
     }
 
+    public void setRented(boolean rented) {
+        isRented = rented;
+    }
+
     public String toString() {
         return description + " (" + tuition + ")";
     }
