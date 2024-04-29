@@ -39,4 +39,9 @@ public class VehicleRent {
     public double getTotalPrice() {
         return totalPrice;
     }
+
+    @Override
+    public String toString() {
+        return vehicle + " - " + customer + " - " + startDate + " - " + endDate + " - " + totalPrice;
+    }
 }
