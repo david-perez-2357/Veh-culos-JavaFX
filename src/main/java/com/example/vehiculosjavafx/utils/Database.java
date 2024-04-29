@@ -85,5 +85,44 @@ public class Database {
             throw new SQLException("Error executing query", e);
         }
     }
+
+    /**
+     * Inicia una transacción en la base de datos
+     * @throws SQLException
+     */
+    public void beginTransaction() throws SQLException {
+        try {
+            connection.setAutoCommit(false); // Desactiva el modo de autocommit para comenzar la transacción
+        } catch (SQLException e) {
+            throw new SQLException("Error starting transaction", e);
+        }
+    }
+
+    /**
+     * Confirma la transacción en la base de datos
+     * @throws SQLException
+     */
+    public void commitTransaction() throws SQLException {
+        try {
+            connection.commit(); // Confirma la transacción
+            connection.setAutoCommit(true); // Restaura el modo de autocommit
+        } catch (SQLException e) {
+            throw new SQLException("Error committing transaction", e);
+        }
+    }
+
+    /**
+     * Cancela la transacción en la base de datos
+     * @throws SQLException
+     */
+    public void rollbackTransaction() throws SQLException {
+        try {
+            connection.rollback(); // Cancela la transacción
+            connection.setAutoCommit(true); // Restaura el modo de autocommit
+        } catch (SQLException e) {
+            throw new SQLException("Error rolling back transaction", e);
+        }
+    }
+
 }
 
