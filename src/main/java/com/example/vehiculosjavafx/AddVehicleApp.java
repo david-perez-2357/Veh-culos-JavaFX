@@ -21,7 +21,7 @@ public class AddVehicleApp extends Application {
     public void start(Stage stage) throws IOException, SQLException {
         FXMLLoader fxmlLoader = new FXMLLoader(AddVehicleApp.class.getResource("add_vehicle.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 900, 650);
-        stage.setTitle("Hello!");
+        stage.setTitle("Alquilar vehículo");
         stage.setScene(scene);
         stage.show();
 
