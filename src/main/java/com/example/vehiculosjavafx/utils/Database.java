@@ -23,12 +23,7 @@ public class Database {
         this.username = username;
         this.password = password;
 
-        try {
-            this.connect();
-        }catch (SQLException e) {
-            throw new SQLException("Error connecting to the database", e);
-        }
-
+        this.connect();
     }
 
     /**
