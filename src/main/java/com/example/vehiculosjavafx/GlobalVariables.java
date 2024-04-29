@@ -4,7 +4,10 @@ import com.example.vehiculosjavafx.models.Customer;
 import com.example.vehiculosjavafx.models.Vehicle;
 import com.example.vehiculosjavafx.models.VehicleRent;
 import com.example.vehiculosjavafx.utils.Database;
+import javafx.scene.control.Alert;
 
+import java.sql.Date;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
@@ -25,6 +28,19 @@ public class GlobalVariables {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    /**
+     * Show an alert with a message and a type
+     * @param message
+     * @param type
+     */
+    public static void showAlert(String message, Alert.AlertType type) {
+        Alert alert = new Alert(type);
+        alert.setTitle("Ventana de alerta");
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
     }
 
     /**
@@ -122,5 +138,30 @@ public class GlobalVariables {
                 .filter(r -> r.getEndDate().isAfter(LocalDate.now()))
                 .toList()
         );
+    }
+
+    /**
+     * Add a rent to the database
+     * @param rent
+     * @return
+     * @throws SQLException
+     */
+    public static Boolean addRent(VehicleRent rent) throws SQLException {
+        String query = "INSERT INTO servicios (matricula_vehiculo, nif_cliente, fecha_alquiler, fecha_entrega, Total) " +
+                "VALUES (?, ?, ?, ?, ?)";
+
+        // Convert LocalDate to Date
+        Date startDate = Date.valueOf(rent.getStartDate());
+        Date endDate = Date.valueOf(rent.getEndDate());
+
+        // Execute the query
+        int rowsAffected = db.executePreparedStatement(query,
+                rent.getVehicle().getTuition(),
+                rent.getCustomer().getNif(),
+                startDate,
+                endDate,
+                rent.getTotalPrice());
+
+        return rowsAffected == 1;
     }
 }
