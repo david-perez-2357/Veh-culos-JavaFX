@@ -20,7 +20,7 @@ public class AddVehicleApp extends Application {
     @Override
     public void start(Stage stage) throws IOException, SQLException {
         FXMLLoader fxmlLoader = new FXMLLoader(AddVehicleApp.class.getResource("add_vehicle.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        Scene scene = new Scene(fxmlLoader.load(), 900, 650);
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();
@@ -32,7 +32,7 @@ public class AddVehicleApp extends Application {
         getRents();
         getActiveRents();
 
-        System.out.println(vehicles);
+        controller.initialize();
     }
 
     public static void main(String[] args) {
