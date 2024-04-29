@@ -7,6 +7,7 @@ module com.example.vehiculosjavafx {
     requires javafx.graphics;
     requires java.sql;
     requires org.json;
+    requires mysql.connector.j;
 
     opens com.example.vehiculosjavafx to javafx.fxml;
     exports com.example.vehiculosjavafx;
