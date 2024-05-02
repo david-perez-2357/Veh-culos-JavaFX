@@ -24,7 +24,7 @@ public class GlobalVariables {
 
     static {
         try {
-            db = new Database("mariadb", "localhost", "root", "1234");
+            db = new Database("mariadb", "rentavehiculos", "root", "1234");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
