@@ -5,7 +5,9 @@ import com.example.vehiculosjavafx.models.Vehicle;
 import com.example.vehiculosjavafx.models.VehicleRent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.sql.SQLException;
 
 import static com.example.vehiculosjavafx.GlobalVariables.addRent;
@@ -88,7 +90,7 @@ public class AddVehicleController {
     }
 
     @FXML
-    private void doRent() throws SQLException {
+    private void doRent() throws SQLException, IOException {
         Vehicle selectedVehicle = (Vehicle) vehicle.getValue();
         Customer selectedCustomer = (Customer) customer.getValue();
 
@@ -117,5 +119,11 @@ public class AddVehicleController {
             vehicle.getItems().addAll(GlobalVariables.vehicles.stream().filter(v -> !v.isRented()).toList());
             GlobalVariables.showAlert("Alquiler añadido correctamente", Alert.AlertType.INFORMATION);
         }
+
+        // Close the window and return to the main view
+        ((Stage) vehicle.getScene().getWindow()).close();
+
+        // Show the main view
+        new RentsViewApp().start(new Stage());
     }
 }
