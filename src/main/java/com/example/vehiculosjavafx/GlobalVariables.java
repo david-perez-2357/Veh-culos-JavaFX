@@ -7,13 +7,11 @@ import com.example.vehiculosjavafx.utils.Database;
 import javafx.scene.control.Alert;
 
 import java.sql.Date;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class GlobalVariables {
     public static final List<Vehicle> vehicles = new ArrayList<>();
@@ -24,7 +22,7 @@ public class GlobalVariables {
 
     static {
         try {
-            db = new Database("mariadb", "rentavehiculos", "root", "1234");
+            db = new Database("mysql", "rentavehiculos", "root", "");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -53,6 +51,7 @@ public class GlobalVariables {
                 "LEFT JOIN servicios sv ON vh.matricula = sv.matricula_vehiculo " +
                 "GROUP BY vh.matricula;"
         );
+        vehicles.clear();
 
         while (result.next()) {
             vehicles.add(new Vehicle(
@@ -74,6 +73,7 @@ public class GlobalVariables {
      */
     public static void getCustomers() throws SQLException {
         ResultSet result = db.executeQuery("SELECT * FROM clientes;");
+        customers.clear();
 
         while (result.next()) {
             customers.add(new Customer(
@@ -93,6 +93,7 @@ public class GlobalVariables {
      */
     public static void getRents() throws SQLException {
         ResultSet result = db.executeQuery("SELECT * FROM servicios;");
+        rents.clear();
 
         while (result.next()) {
             Vehicle vehicle = vehicles.stream()
