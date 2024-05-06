@@ -23,6 +23,10 @@ public class AddVehicleApp extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 900, 650);
         stage.setTitle("Alquilar vehículo");
         stage.setScene(scene);
+
+        String cssPath = "bootstrap.min.css";
+        stage.getScene().getStylesheets().add(cssPath);
+        
         stage.show();
 
         AddVehicleController controller = fxmlLoader.getController();
