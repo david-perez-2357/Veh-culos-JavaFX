@@ -20,7 +20,7 @@
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
                <children>
                   <Label text="Cliente" />
-                  <ComboBox fx:id="customerSelector" onAction="#customerSelectorChanged" prefWidth="150.0" styleClass="form-control" />
+                  <ComboBox fx:id="customerSelector" onAction="#customerSelectorChanged" prefWidth="150.0" styleClass="combo-box" />
                </children>
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
@@ -39,8 +39,8 @@
          <children>
             <Button fx:id="newRentButton" mnemonicParsing="false" onAction="#newRentClick" text="Alquilar vehículo">
                <styleClass>
-                  <String fx:value="btn" />
-                  <String fx:value="btn-primary" />
+                  <String fx:value="button" />
+                  <String fx:value="primary" />
                </styleClass></Button>
          </children>
       </VBox>

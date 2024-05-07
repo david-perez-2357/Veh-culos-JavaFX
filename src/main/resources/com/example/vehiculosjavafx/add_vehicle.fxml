@@ -132,7 +132,11 @@
             <Button mnemonicParsing="false" onAction="#doRent" text="Rentar vehículo" HBox.hgrow="ALWAYS">
                <font>
                   <Font size="18.0" />
-               </font></Button>
+               </font>
+               <styleClass>
+                  <String fx:value="button" />
+                  <String fx:value="primary" />
+               </styleClass></Button>
          </children>
       </HBox>
    </children>
