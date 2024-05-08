@@ -39,8 +39,8 @@
          <children>
             <Button fx:id="newRentButton" mnemonicParsing="false" onAction="#newRentClick" text="Alquilar vehículo">
                <styleClass>
-                  <String fx:value="button" />
-                  <String fx:value="primary" />
+                  <String fx:value="btn" />
+                  <String fx:value="btn-primary" />
                </styleClass></Button>
          </children>
       </VBox>

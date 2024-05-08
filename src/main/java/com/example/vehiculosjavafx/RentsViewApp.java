@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.kordamp.bootstrapfx.BootstrapFX;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -22,8 +23,7 @@ public class RentsViewApp extends Application {
         stage.setTitle("Alquileres");
         stage.setScene(scene);
 
-        String cssPath = "bootstrap.min.css";
-        stage.getScene().getStylesheets().add(cssPath);
+        scene.getStylesheets().add(BootstrapFX.bootstrapFXStylesheet());
 
         System.out.println("Hoja de estilos aplicada: " + scene.getStylesheets());
 

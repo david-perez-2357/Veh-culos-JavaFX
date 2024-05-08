@@ -134,8 +134,8 @@
                   <Font size="18.0" />
                </font>
                <styleClass>
-                  <String fx:value="button" />
-                  <String fx:value="primary" />
+                  <String fx:value="btn" />
+                  <String fx:value="btn-primary" />
                </styleClass></Button>
          </children>
       </HBox>

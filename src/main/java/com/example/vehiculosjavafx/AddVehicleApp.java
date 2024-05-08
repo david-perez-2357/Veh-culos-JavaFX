@@ -6,6 +6,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.kordamp.bootstrapfx.BootstrapFX;
 
 import java.io.IOException;
 import java.sql.ResultSet;
@@ -24,8 +25,7 @@ public class AddVehicleApp extends Application {
         stage.setTitle("Alquilar vehículo");
         stage.setScene(scene);
 
-        String cssPath = "bootstrap.min.css";
-        stage.getScene().getStylesheets().add(cssPath);
+        scene.getStylesheets().add(BootstrapFX.bootstrapFXStylesheet());
         
         stage.show();
 
